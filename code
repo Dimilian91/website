@@ -12,11 +12,10 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-    <script src="font/RoslindaleCyrillic-DeckNarrowMedium.otf"></script>
     <title>my site</title>
     <style>
       body {
-        font-family: "RoslindaleCyrillic";
+        font-family: "RoslindaleCyrillic", serif;
         font-size: 1.2rem;
         padding-top: 6rem;
       }
@@ -28,13 +27,16 @@
         width: 200px;
         height: 200px;
       }
+      html {
+        scroll-padding-top: 70px;
+      }
     </style>
   </head>
   <body>
     <!-- Header start -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">dr.wlasova</a>
+        <a class="navbar-brand" href="#drWlasova">dr.wlasova</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -50,19 +52,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#smiles">мои улыбки</a>
+              <a class="nav-link" data-value="smiles" href="#smiles"
+                >мои улыбки</a
+              >
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#price">прайс</a>
+              <a class="nav-link" data-value="price" href="#price">прайс</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#hygiene">гигиена</a>
+              <a class="nav-link" data-value="hygiene" href="#hygiene"
+                >гигиена</a
+              >
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#education">образование</a>
+              <a class="nav-link" data-value="education" href="#education"
+                >образование</a
+              >
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#questions">популярные вопросы</a>
+              <a class="nav-link" data-value="questions" href="#questions"
+                >популярные вопросы</a
+              >
             </li>
           </ul>
         </div>
@@ -73,7 +83,7 @@
       <!-- About me start -->
       <div class="card text-center border-white">
         <div class="card-body">
-          <h2 class="lead-title">ВЛАСОВА АНАСТАСИЯ МИХАЙЛОВНА</h2>
+          <h2 class="lead-title" id="drWlasova">ВЛАСОВА АНАСТАСИЯ МИХАЙЛОВНА</h2>
           <p class="lead">стоматолог-ортодонт</p>
         </div>
       </div>
@@ -82,19 +92,21 @@
       <hr class="hr ml-5 mr-5" />
 
       <!-- My foto start -->
-      <div class="row justify-content-center m-0">
-        <div class="col-md-6">
-          <div class="card mb-3 ml-1 mr-1 border-white text-center">
-            <img
-              src="img/IMG_9785.jpg"
-              class="card-img-top img-thumbnail"
-              alt="#"
-            />
-            <div class="card-body">
-              <p class="lead">
-                Заботливое и уютное ортодонтическое лечение с вниманием к
-                мелочам.
-              </p>
+      <div class="container">
+        <div class="row justify-content-center m-0">
+          <div class="col-md-6">
+            <div class="card mb-3 ml-1 mr-1 border-white text-center">
+              <img
+                src="img/IMG_9785.jpg"
+                class="card-img-top img-thumbnail"
+                alt="#"
+              />
+              <div class="card-body">
+                <p class="lead">
+                  Заботливое и уютное ортодонтическое лечение с вниманием к
+                  мелочам.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -104,51 +116,53 @@
       <hr class="hr ml-5 mr-5" />
 
       <!-- My smiles start -->
-      <div class="row">
-        <div class="col-12 text-center mt-3 mb-4">
-          <h4 class="lead-title" id="smiles">МОИ УЛЫБКИ</h4>
-        </div>
-        <div class="col-lg-4">
-          <div class="card mb-3 ml-5 mr-5 border-white">
-            <img
-              src="img/IMG_0033.jpg"
-              class="card-img img-thumbnail rounded-circle smile rounded mx-auto d-block"
-              alt="#"
-            />
-            <div class="card-body p-0 text-center">
-              <p class="lead">
-                Из всех лекарств улыбка, безусловно, лучшее лекарство.
-              </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mt-3 mb-4">
+            <h4 class="lead-title" id="smiles">МОИ УЛЫБКИ</h4>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mb-3 ml-5 mr-5 border-white">
+              <img
+                src="img/IMG_0033.jpg"
+                class="card-img img-thumbnail rounded-circle smile rounded mx-auto d-block"
+                alt="#"
+              />
+              <div class="card-body p-0 text-center">
+                <p class="lead">
+                  Из всех лекарств улыбка, безусловно, лучшее лекарство.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card mb-3 ml-5 mr-5 border-white text-center">
-            <img
-              src="img/IMG_0029 2.jpg"
-              class="card-img img-thumbnail rounded-circle smile rounded mx-auto d-block"
-              alt="#"
-            />
-            <div class="card-body p-0">
-              <p class="lead">
-                Никогда не переставай улыбаться, даже когда тебе грустно: кто-то
-                может влюбиться в твою улыбку.
-              </p>
+          <div class="col-lg-4">
+            <div class="card mb-3 ml-5 mr-5 border-white text-center">
+              <img
+                src="img/IMG_0029 2.jpg"
+                class="card-img img-thumbnail rounded-circle smile rounded mx-auto d-block"
+                alt="#"
+              />
+              <div class="card-body p-0">
+                <p class="lead">
+                  Никогда не переставай улыбаться, даже когда тебе грустно:
+                  кто-то может влюбиться в твою улыбку.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card mb-3 ml-5 mr-5 border-white text-center">
-            <img
-              src="img/IMG_7107.jpg"
-              class="card-img img-thumbnail rounded-circle smile rounded mx-auto d-block"
-              alt="#"
-            />
-            <div class="card-body p-0">
-              <p class="lead">
-                Давайте всегда встречать друг друга с улыбкой, ведь улыбка - это
-                начало любви.
-              </p>
+          <div class="col-lg-4">
+            <div class="card mb-3 ml-5 mr-5 border-white text-center">
+              <img
+                src="img/IMG_7107.jpg"
+                class="card-img img-thumbnail rounded-circle smile rounded mx-auto d-block"
+                alt="#"
+              />
+              <div class="card-body p-0">
+                <p class="lead">
+                  Давайте всегда встречать друг друга с улыбкой, ведь улыбка -
+                  это начало любви.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -158,44 +172,46 @@
       <hr class="hr ml-5 mr-5" />
 
       <!-- Price start -->
-      <div class="row justify-content-center ml-2 mr-2">
-        <div class="col-lg-8">
-          <h4 class="lead-title text-center mt-3 mb-4" id="price">ПРАЙС</h4>
-          <table class="table table-hover">
-            <tbody>
-              <tr>
-                <td>Первичная консультация</td>
-                <th scope="row">3 000 рублей</th>
-              </tr>
-              <tr>
-                <td>Диагностика перед началом ортодонтического лечения</td>
-                <th scope="row">12 000 рублей</th>
-              </tr>
-              <tr>
-                <td>Лечение на металлической брекет-системе</td>
-                <th scope="row">от 180 000 рублей</th>
-              </tr>
-              <tr>
-                <td>Лечение на аппарате Марко Росса</td>
-                <th scope="row">50 000 рублей</th>
-              </tr>
-              <tr>
-                <td>Миофункциональное ортодонтическое лечение детей</td>
-                <th scope="row">30 000 рублей</th>
-              </tr>
-              <tr>
-                <td>Профессиональная гигиена полости рта</td>
-                <th scope="row">8 000 рублей</th>
-              </tr>
-              <tr>
-                <td>
-                  Индивидульный подбор средств и обучение методу домашней
-                  гигиене по программе iTOP (длительность 1 час)
-                </td>
-                <th scope="row">5 000 рублей</th>
-              </tr>
-            </tbody>
-          </table>
+      <div class="container">
+        <div class="row justify-content-center ml-2 mr-2">
+          <div class="col-lg-8">
+            <h4 class="lead-title text-center mt-3 mb-4" id="price">ПРАЙС</h4>
+            <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <td>Первичная консультация</td>
+                  <th scope="row">3 000 рублей</th>
+                </tr>
+                <tr>
+                  <td>Диагностика перед началом ортодонтического лечения</td>
+                  <th scope="row">12 000 рублей</th>
+                </tr>
+                <tr>
+                  <td>Лечение на металлической брекет-системе</td>
+                  <th scope="row">от 180 000 рублей</th>
+                </tr>
+                <tr>
+                  <td>Лечение на аппарате Марко Росса</td>
+                  <th scope="row">50 000 рублей</th>
+                </tr>
+                <tr>
+                  <td>Миофункциональное ортодонтическое лечение детей</td>
+                  <th scope="row">30 000 рублей</th>
+                </tr>
+                <tr>
+                  <td>Профессиональная гигиена полости рта</td>
+                  <th scope="row">8 000 рублей</th>
+                </tr>
+                <tr>
+                  <td>
+                    Индивидульный подбор средств и обучение методу домашней
+                    гигиене по программе iTOP (длительность 1 час)
+                  </td>
+                  <th scope="row">5 000 рублей</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <!-- Price end -->
@@ -203,67 +219,69 @@
       <hr class="hr ml-5 mr-5" />
 
       <!-- Hygiene start -->
-      <div class="row">
-        <div class="col-12 text-center mt-3 mb-4">
-          <h4 class="lead-title mb-4" id="hygiene">ГИГИЕНА</h4>
-          <div class="card mb-3 border-white">
-            <img
-              src="img/IMG_5516.jpg"
-              class="card-img-top img-thumbnail"
-              alt="..."
-            />
-            <div class="card-body">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <p class="card-text">
-                    Правильный уход за зубами – это залог здоровья ротовой
-                    полости и всего организма, а здоровые и чистые зубы - это
-                    красивая улыбка и уверенность в себе.
-                  </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mt-3 mb-4">
+            <h4 class="lead-title mb-4" id="hygiene">ГИГИЕНА</h4>
+            <div class="card mb-3 border-white">
+              <img
+                src="img/IMG_5516.jpg"
+                class="card-img-top img-thumbnail"
+                alt="..."
+              />
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <p class="card-text">
+                      Правильный уход за зубами – это залог здоровья ротовой
+                      полости и всего организма, а здоровые и чистые зубы - это
+                      красивая улыбка и уверенность в себе.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row row-cols-1 row-cols-md-2">
-            <div class="col mb-4">
-              <div class="card border-white">
-                <img
-                  src="img/IMG_0031.jpg"
-                  class="card-img-top hygiene rounded mx-auto d-block img-thumbnail"
-                  alt="..."
-                />
-                <div class="card-body ml-5 mr-5">
-                  <p class="card-text">
-                    Полезный материал для подготовки зубов к брекетам и базового
-                    домашнего ухода.
-                  </p>
-                  <a
-                    href="doc/Методичка по гигиене.pdf"
-                    class="btn btn-secondary"
-                    target="_blank"
-                    >Смотреть</a
-                  >
+            <div class="row row-cols-1 row-cols-md-2">
+              <div class="col mb-4">
+                <div class="card border-white">
+                  <img
+                    src="img/IMG_0031.jpg"
+                    class="card-img-top hygiene rounded mx-auto d-block img-thumbnail"
+                    alt="..."
+                  />
+                  <div class="card-body ml-5 mr-5">
+                    <p class="card-text">
+                      Полезный материал для подготовки зубов к брекетам и
+                      базового домашнего ухода.
+                    </p>
+                    <a
+                      href="doc/Методичка по гигиене.pdf"
+                      class="btn btn-secondary"
+                      target="_blank"
+                      >Смотреть</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card border-white">
-                <img
-                  src="img/IMG_8965.jpg"
-                  class="card-img-top hygiene rounded mx-auto d-block img-thumbnail"
-                  alt="..."
-                />
-                <div class="card-body ml-5 mr-5">
-                  <p class="card-text">
-                    Полезный материал для ухода за зубами в процессе лечения на
-                    брекет-системе.
-                  </p>
-                  <a
-                    href="doc/Средства гигиены для брекетов.pdf"
-                    class="btn btn-secondary"
-                    target="_blank"
-                    >Смотреть</a
-                  >
+              <div class="col mb-4">
+                <div class="card border-white">
+                  <img
+                    src="img/IMG_8965.jpg"
+                    class="card-img-top hygiene rounded mx-auto d-block img-thumbnail"
+                    alt="..."
+                  />
+                  <div class="card-body ml-5 mr-5">
+                    <p class="card-text">
+                      Полезный материал для ухода за зубами в процессе лечения
+                      на брекет-системе.
+                    </p>
+                    <a
+                      href="doc/Средства гигиены для брекетов.pdf"
+                      class="btn btn-secondary"
+                      target="_blank"
+                      >Смотреть</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -275,162 +293,165 @@
       <hr class="hr ml-5 mr-5" />
 
       <!-- Education start-->
-      <div class="row justify-content-center ml-2 mr-2">
-        <div class="col-lg-8">
-          <h4 class="lead-title text-center mt-3 mb-4" id="education">
-            ОБРАЗОВАНИЕ
-          </h4>
-          <table class="table table-hover">
-            <tbody>
-              <tr>
-                <th scope="row">2017г.</th>
-                <td>
-                  Рязанский Государственный Медицинский Университет имени
-                  академика И. П. Павлова, Рязань
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2019г.</th>
-                <td>
-                  “Центральная Государственная Медицинская академия” Управления
-                  Делами Президента РФ
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-block lead text-center btn-light"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                    КУРСЫ
-                  </button>
-                </h2>
-              </div>
+      <div class="container">
+        <div class="row justify-content-center ml-2 mr-2">
+          <div class="col-lg-8">
+            <h4 class="lead-title text-center mt-3 mb-4" id="education">
+              ОБРАЗОВАНИЕ
+            </h4>
+            <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <th scope="row">2017г.</th>
+                  <td>
+                    Рязанский Государственный Медицинский Университет имени
+                    академика И. П. Павлова, Рязань
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2019г.</th>
+                  <td>
+                    “Центральная Государственная Медицинская академия”
+                    Управления Делами Президента РФ
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-block lead text-center btn-light"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      КУРСЫ
+                    </button>
+                  </h2>
+                </div>
 
-              <div
-                id="collapseOne"
-                class="collapse"
-                aria-labelledby="headingOne"
-                data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  <table class="table table-hover">
-                    <tbody>
-                      <tr>
-                        <th scope="row">2017г.</th>
-                        <td>Современные концепции в стоматологии</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2018г.</th>
-                        <td>
-                          Сертификационный курс по работе с элайнерами ЕВРОКАППА
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2018г.</th>
-                        <td>
-                          Теория и практика по использованию профессиональных
-                          систем Philips ZOOM для отбеливания зубов в
-                          клинических и домашних условиях
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2019г.</th>
-                        <td>Работа с КЛКТ, Пикассо</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2019г.</th>
-                        <td>
-                          Сертификационный курс по работе с элайнерами
-                          Invisalign
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2019г.</th>
-                        <td>9 Конференция начинающих ортодонтов, ORMCO</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2019г.</th>
-                        <td>
-                          Лечение и профилактика дисфункции ВНЧС, лектор
-                          Дьячкова Яна Юрьевна
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2019г.</th>
-                        <td>"Я-ортодонт" Ортокружок Михаила Есиповича</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2021г.</th>
-                        <td>
-                          "Обобщение клиническое опыта. Перезагрузка". Семинар
-                          Ortho Reload
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2021г.</th>
-                        <td>
-                          "Ортодонтическое лечение детей. Что? Где? Когда?"
-                          Сергей Тихоново
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2021г.</th>
-                        <td>
-                          Сертификат участия в Программе наставничества. ООО
-                          "Элайн Технолоджи"
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2021г.</th>
-                        <td>
-                          "Ошибки и осложнения в ортодонтическом лечении.
-                          Перезагрузка. Второй модуль." Кирилл Зернов и Михаил
-                          Морозов
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2022г.</th>
-                        <td>Обобщение клинического опыта. Перезагрузка</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2022г.</th>
-                        <td>
-                          Семинар: "Как сделать миофункциональную коррекцию
-                          приятной", УМЦ "Валлекс М"
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2022г.</th>
-                        <td>Участник конференция Ortho Talks</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2023г.</th>
-                        <td>
-                          Сертифицированный коуч iTOP “теория и практика Touch
-                          to Teach в небольших группах» в области профилактики и
-                          индивидуального подбора средств гигиена для каждого
-                          пациента
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2024г.</th>
-                        <td>
-                          Компенсаторные и детализирующие изгибы на дугах.
-                          Теоретическое обоснование и отработка техники
-                          выполнения ORTHO RELOAD
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div
+                  id="collapseOne"
+                  class="collapse"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <table class="table table-hover">
+                      <tbody>
+                        <tr>
+                          <th scope="row">2017г.</th>
+                          <td>Современные концепции в стоматологии</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2018г.</th>
+                          <td>
+                            Сертификационный курс по работе с элайнерами
+                            ЕВРОКАППА
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2018г.</th>
+                          <td>
+                            Теория и практика по использованию профессиональных
+                            систем Philips ZOOM для отбеливания зубов в
+                            клинических и домашних условиях
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2019г.</th>
+                          <td>Работа с КЛКТ, Пикассо</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2019г.</th>
+                          <td>
+                            Сертификационный курс по работе с элайнерами
+                            Invisalign
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2019г.</th>
+                          <td>9 Конференция начинающих ортодонтов, ORMCO</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2019г.</th>
+                          <td>
+                            Лечение и профилактика дисфункции ВНЧС, лектор
+                            Дьячкова Яна Юрьевна
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2019г.</th>
+                          <td>"Я-ортодонт" Ортокружок Михаила Есиповича</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2021г.</th>
+                          <td>
+                            "Обобщение клиническое опыта. Перезагрузка". Семинар
+                            Ortho Reload
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2021г.</th>
+                          <td>
+                            "Ортодонтическое лечение детей. Что? Где? Когда?"
+                            Сергей Тихоново
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2021г.</th>
+                          <td>
+                            Сертификат участия в Программе наставничества. ООО
+                            "Элайн Технолоджи"
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2021г.</th>
+                          <td>
+                            "Ошибки и осложнения в ортодонтическом лечении.
+                            Перезагрузка. Второй модуль." Кирилл Зернов и Михаил
+                            Морозов
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2022г.</th>
+                          <td>Обобщение клинического опыта. Перезагрузка</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2022г.</th>
+                          <td>
+                            Семинар: "Как сделать миофункциональную коррекцию
+                            приятной", УМЦ "Валлекс М"
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2022г.</th>
+                          <td>Участник конференция Ortho Talks</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2023г.</th>
+                          <td>
+                            Сертифицированный коуч iTOP “теория и практика Touch
+                            to Teach в небольших группах» в области профилактики
+                            и индивидуального подбора средств гигиена для
+                            каждого пациента
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2024г.</th>
+                          <td>
+                            Компенсаторные и детализирующие изгибы на дугах.
+                            Теоретическое обоснование и отработка техники
+                            выполнения ORTHO RELOAD
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -442,182 +463,184 @@
       <hr class="hr ml-5 mr-5" />
 
       <!-- Questions start -->
-      <div class="row justify-content-center ml-2 mr-2">
-        <div class="col-lg-8">
-          <h4 class="lead-title text-center mt-3 mb-4" id="questions">
-            ПОПУЛЯРНЫЕ ВОПРОСЫ
-          </h4>
-          <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-light btn-block text-left"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse1"
-                    aria-expanded="true"
-                    aria-controls="collapse1"
-                  >
-                    1. БРЕКЕТЫ ПОРТЯТ ЭМАЛЬ ЗУБОВ И ПРОВОЦИРУЮТ ПОЯВЛЕНИЕ
-                    КАРИЕСА?
-                  </button>
-                </h2>
-              </div>
+      <div class="container">
+        <div class="row justify-content-center ml-2 mr-2">
+          <div class="col-lg-8">
+            <h4 class="lead-title text-center mt-3 mb-4" id="questions">
+              ПОПУЛЯРНЫЕ ВОПРОСЫ
+            </h4>
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-light btn-block text-left"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapse1"
+                      aria-expanded="true"
+                      aria-controls="collapse1"
+                    >
+                      1. БРЕКЕТЫ ПОРТЯТ ЭМАЛЬ ЗУБОВ И ПРОВОЦИРУЮТ ПОЯВЛЕНИЕ
+                      КАРИЕСА?
+                    </button>
+                  </h2>
+                </div>
 
-              <div
-                id="collapse1"
-                class="collapse"
-                aria-labelledby="heading1"
-                data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  Нет. Портит зубы - плохая гигиена полости рта
+                <div
+                  id="collapse1"
+                  class="collapse"
+                  aria-labelledby="heading1"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Нет. Портит зубы - плохая гигиена полости рта
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="heading2">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-light btn-block text-left collapsed"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse2"
-                    aria-expanded="false"
-                    aria-controls="collapse2"
-                  >
-                    2. СКОЛЬКО ДЛИТЬСЯ ОРТОДОНТИЧЕСКОЕ ЛЕЧЕНИЕ НА БРЕКЕТАХ?
-                  </button>
-                </h2>
-              </div>
-              <div
-                id="collapse2"
-                class="collapse"
-                aria-labelledby="heading2"
-                data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  В среднем ортодонтическое лечение длится 1.5 - 2,5 лет В
-                  некоторых случаях может занимать больше времени. Сроки
-                  ортодонтического лечения могут варьироваться в зависимости от
-                  сложности клинического случая и ответственности пациента.
+              <div class="card">
+                <div class="card-header" id="heading2">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-light btn-block text-left collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapse2"
+                      aria-expanded="false"
+                      aria-controls="collapse2"
+                    >
+                      2. СКОЛЬКО ДЛИТЬСЯ ОРТОДОНТИЧЕСКОЕ ЛЕЧЕНИЕ НА БРЕКЕТАХ?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapse2"
+                  class="collapse"
+                  aria-labelledby="heading2"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    В среднем ортодонтическое лечение длится 1.5 - 2,5 лет В
+                    некоторых случаях может занимать больше времени. Сроки
+                    ортодонтического лечения могут варьироваться в зависимости
+                    от сложности клинического случая и ответственности пациента.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="heading3">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-light btn-block text-left collapsed"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse3"
-                    aria-expanded="false"
-                    aria-controls="collapse3"
-                  >
-                    3. СТАВИТЬ БРЕКЕТЫ БОЛЬНО?
-                  </button>
-                </h2>
-              </div>
-              <div
-                id="collapse3"
-                class="collapse"
-                aria-labelledby="heading3"
-                data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  Процесс установки брекет-системы безболезненный, но
-                  длительный. В среднем установка аппаратуры занимает около
-                  часа. Сложно первые несколько дней после установки
-                  брекет-системы - происходит адаптация пациента к установленной
-                  аппаратуре в полости рта. Как правило, в эти дни чувствуется
-                  небольшой дискомфорт, ноющая боль.
+              <div class="card">
+                <div class="card-header" id="heading3">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-light btn-block text-left collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapse3"
+                      aria-expanded="false"
+                      aria-controls="collapse3"
+                    >
+                      3. СТАВИТЬ БРЕКЕТЫ БОЛЬНО?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapse3"
+                  class="collapse"
+                  aria-labelledby="heading3"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Процесс установки брекет-системы безболезненный, но
+                    длительный. В среднем установка аппаратуры занимает около
+                    часа. Сложно первые несколько дней после установки
+                    брекет-системы - происходит адаптация пациента к
+                    установленной аппаратуре в полости рта. Как правило, в эти
+                    дни чувствуется небольшой дискомфорт, ноющая боль.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="heading3">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-light btn-block text-left collapsed"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse4"
-                    aria-expanded="false"
-                    aria-controls="collapse4"
-                  >
-                    4. КАК ОБЛЕГЧИТЬ БОЛЬ В ПЕРВЫЕ ДНИ ПРИВЫКАНИЯ К БРЕКЕТАМ?
-                  </button>
-                </h2>
-              </div>
-              <div
-                id="collapse4"
-                class="collapse"
-                aria-labelledby="heading4"
-                data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  Выпить обезболивающее, употреблять в пищу мягкие продукты,
-                  скушать мороженое - холод снижает работу дуг и чуть уменьшает
-                  болевые ощущения.
+              <div class="card">
+                <div class="card-header" id="heading3">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-light btn-block text-left collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapse4"
+                      aria-expanded="false"
+                      aria-controls="collapse4"
+                    >
+                      4. КАК ОБЛЕГЧИТЬ БОЛЬ В ПЕРВЫЕ ДНИ ПРИВЫКАНИЯ К БРЕКЕТАМ?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapse4"
+                  class="collapse"
+                  aria-labelledby="heading4"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Выпить обезболивающее, употреблять в пищу мягкие продукты,
+                    скушать мороженое - холод снижает работу дуг и чуть
+                    уменьшает болевые ощущения.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="heading3">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-light btn-block text-left collapsed"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse5"
-                    aria-expanded="false"
-                    aria-controls="collapse5"
-                  >
-                    5. КАК ЧАСТО НУЖНО ПОСЕЩАТЬ ОРТОДОНТА?
-                  </button>
-                </h2>
-              </div>
-              <div
-                id="collapse5"
-                class="collapse"
-                aria-labelledby="heading5"
-                data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  1 раз в 1.5-2-2.5 месяца, все зависит от клинического случая,
-                  перерыв между посещениям должен быть не дольше 3х месяцев
-                  иначе это может навредить состоянию зубов.
+              <div class="card">
+                <div class="card-header" id="heading3">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-light btn-block text-left collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapse5"
+                      aria-expanded="false"
+                      aria-controls="collapse5"
+                    >
+                      5. КАК ЧАСТО НУЖНО ПОСЕЩАТЬ ОРТОДОНТА?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapse5"
+                  class="collapse"
+                  aria-labelledby="heading5"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    1 раз в 1.5-2-2.5 месяца, все зависит от клинического
+                    случая, перерыв между посещениям должен быть не дольше 3х
+                    месяцев иначе это может навредить состоянию зубов.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="heading6">
-                <h2 class="mb-0">
-                  <button
-                    class="btn btn-light btn-block text-left collapsed"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#collapse6"
-                    aria-expanded="false"
-                    aria-controls="collapse6"
-                  >
-                    6. ЗУБЫ МУДРОСТИ ВСЕГДА УДАЛЯЮТ ПЕРЕД ОРТОДОНТИЧЕСКИМ
-                    ЛЕЧЕНИЕМ?
-                  </button>
-                </h2>
-              </div>
-              <div
-                id="collapse6"
-                class="collapse"
-                aria-labelledby="heading6"
-                data-parent="#accordionExample"
-              >
-                <div class="card-body">
-                  Все по показаниям, чаще да, но иногда такой необходимости нет,
-                  поэтому не спешите удалять зубы мудрости, для начала
-                  проконсультируйтесь с ортодонтом.
+              <div class="card">
+                <div class="card-header" id="heading6">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-light btn-block text-left collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapse6"
+                      aria-expanded="false"
+                      aria-controls="collapse6"
+                    >
+                      6. ЗУБЫ МУДРОСТИ ВСЕГДА УДАЛЯЮТ ПЕРЕД ОРТОДОНТИЧЕСКИМ
+                      ЛЕЧЕНИЕМ?
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapse6"
+                  class="collapse"
+                  aria-labelledby="heading6"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Все по показаниям, чаще да, но иногда такой необходимости
+                    нет, поэтому не спешите удалять зубы мудрости, для начала
+                    проконсультируйтесь с ортодонтом.
+                  </div>
                 </div>
               </div>
             </div>
@@ -629,30 +652,62 @@
       <hr class="hr ml-5 mr-5" />
 
       <!-- Footer start -->
-      <footer class="footer mt-auto py-3">
+      <!-- <footer class="footer mt-auto py-3">
         <div class="container">
-          <span class="text-muted"></span>
+          <table class="table table-borderless">
+            <tbody>
+              <tr>
+                <th scope="row" class="p-0">Адрес: </th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row" class="p-0">Почта: </th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row" class="p-0">Телефон: </th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </footer>
+      </footer> -->
       <!-- Footer end -->
     </main>
 
     <script>
+      //CLOSE BURGER MENU
 
-      let burgerMenu = document.getElementById("clBtNv");
-      let show = document.getElementById("navbarNav");
+      // let burgerMenu = document.getElementById("clBtNv");
+      // let show = document.getElementById("navbarNav");
 
-      burgerMenu.addEventListener("click", function () {
-        this.expandedList.toggle("true");
-        show.classList.toggle("show");
-      });
-      show.addEventListener("click", function (e) {
-        if (e.target.matches("a")) {
-          show.classList.remove("show");
-          burgerMenu.expandedList.remove("true");
-        }
-      });
+      // burgerMenu.addEventListener("click", function () {
+      //   this.expandedList.toggle("true");
+      //   show.classList.toggle("show");
+      // });
+      // show.addEventListener("click", function (e) {
+      //   if (e.target.matches("a")) {
+      //     show.classList.remove("show");
+      //     burgerMenu.expandedList.remove("true");
+      //   }
+      // });
 
+      // SMOOTH SCROLLING
+
+      const anchors = document.querySelectorAll('a[href*="#"]');
+
+      for (let anchor of anchors) {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const blockID = anchor.getAttribute("href").substr(1);
+
+          document.getElementById(blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+      }
     </script>
 
     <script
@@ -665,5 +720,15 @@
       integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+
+      //CLOSE BURGER MENU
+
+      $(".navbar-nav").on("click", "li a", () =>
+        $(".navbar-collapse.show").collapse("hide")
+      );
+
+    </script>
   </body>
 </html>
